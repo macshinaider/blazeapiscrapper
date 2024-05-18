@@ -26,7 +26,7 @@ ENV REDIS_HOST="192.168.1.26"
 ENV REDIS_PORT=6379
 RUN npx puppeteer browsers install chrome
 
-RUN npx prisma db push
+# RUN npx prisma db push
 
 # Crie um usuário não-root chamado 'appuser'
 RUN useradd -m appuser
