@@ -21,7 +21,7 @@ COPY . .
 
 # Instale as dependências do projeto
 RUN npm install
-ENV DATABASE_URL="mysql://root:Lucas102030@blaze_db:3306/blaze"
+ENV DATABASE_URL="mysql://root:Lucas102030@189.19.71.20:3306/blaze"
 ENV REDIS_HOST="192.168.1.26"
 ENV REDIS_PORT=6379
 RUN npx puppeteer browsers install chrome
