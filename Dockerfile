@@ -22,14 +22,13 @@ COPY . .
 # Instale as dependências do projeto
 RUN npm install
 ENV DATABASE_URL="mysql://root:Lucas102030@189.19.71.20:3306/blaze"
-ENV REDIS_HOST="192.168.1.26"
-ENV REDIS_PORT=6379
+
 RUN npx puppeteer browsers install chrome
 
-# RUN npx prisma db push
+RUN npx prisma db push
 
 # Crie um usuário não-root chamado 'appuser'
-RUN useradd -m appuser
+RUN sudo useradd -m appuser
 
 # Altere a propriedade do diretório para o usuário não-root
 RUN chown -R appuser:appuser /app
