@@ -11,7 +11,7 @@ export class PuppeteerService implements OnModuleInit {
 
   async scrapperPuppeteer() {
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       args: [
         '--disable-web-security',
         '--no-sandbox',
